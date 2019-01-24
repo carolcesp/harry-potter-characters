@@ -6,20 +6,18 @@ import {Link} from 'react-router-dom';
 class CharacterDetails extends Component {
 
 render() {
- 
   const {results} = this.props;
   const characterId = this.props.match.params.id;
 
   if (results.length > 0 && characterId < results.length)  {
     const details = results[characterId];
-    const {image, name, house,dateOfBirth,patronus} = details;
-    
-    const deadOrAlive = (details.alive === true) ? 'vivo' : 'muerto';
+    const {image,name,house,dateOfBirth,patronus} = details;
+    const deadOrAlive = (details.alive === true) ? 'VIV@ ' : 'MUERTO ☠️';
 
     return (
       <React.Fragment>
         <div className="link_return">
-            <Link to="/">Volver</Link>
+          <Link to="/" >Volver al listado</Link>
         </div>
         <div className="content_detail-card">
           <div className="detail_card-image">
@@ -28,10 +26,10 @@ render() {
           <div className="character_card">
             <h2 className="character_detail-name">{name}</h2>
             <ul className="detail_card-list">
-              <li className="character_detail-house">{house}</li>
-              <li className="character_detail-date">{dateOfBirth}</li>
-              <li className="character_detail-patronus">{patronus}</li>
-              <li className="character_detail-alive">{deadOrAlive}</li>
+              <li className="character_detail-house">Casa: {house} </li>
+              <li className="character_detail-date">Nacimiento: {dateOfBirth}</li>
+              <li className="character_detail-patronus">Patronus: {patronus}</li>
+              <li className="character_detail-alive">Estado: {deadOrAlive}</li>
             </ul>
           </div>
         </div>

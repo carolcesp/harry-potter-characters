@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import PropTypes from "prop-types";
 
 class CharacterCard extends Component {
   render() {
@@ -9,9 +10,14 @@ class CharacterCard extends Component {
           <h2 className="character_name">{name}</h2>
           <p className="character_house">{house}</p>
         </div>
-  
     );
-  }
-}
+  };
+};
+
+CharacterCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  house: PropTypes.string.isRequired
+};
 
 export default CharacterCard;
