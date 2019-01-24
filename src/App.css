@@ -18,14 +18,31 @@
   grid-gap: 20px
 }
 .characters_list-card {
+  background-color: rgb(216, 100, 58);
+  color: white;
   border:2px solid black;
-  height: 380px;
-  
+  height:400px;
 }
-/* .characters_card */
+.characters_list-card-item{
+  text-align: center;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 100px 10px;
+
+}
 .character_image{
   width: 200px;
-  height: 250px;
+  height: 270px;
 }
-/* .character_name */
-/* .character_house   */
+.character_name{
+  margin-top:30px;
+}
+/* .character_house-content {
+  background-color: pink;
+ 
+ 
+}  */
+/* .character_house {
+
+
+}  */
