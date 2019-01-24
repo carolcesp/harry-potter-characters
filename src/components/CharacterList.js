@@ -1,19 +1,24 @@
 import React, {Component} from "react";
+import CharacterCard from './CharacterCard';
+import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
+
 
 class CharacterList extends Component {
   render() {
       return (
         <div className="content_list">
           <ul className="characters_list">
-              {this.props.filterResult.map((item) => {
+              {this.props.filterResult.map((item,index) => {
                 return (
-                  <li className="characters_list-card">
-                    <div className="characters_list-card-item">
-                      <img src={item.image} alt={item.name} className="character_image"/>
-                      <h2 className="character_name">{item.name}</h2>
-                        <p className="character_house">{item.house}</p>
-                    </div>
+                  <li className="characters_list-card" key={index}>
+                    <Link className="character_link" to={`/details/${item.id}`}>
+                      <CharacterCard 
+                        image={item.image}
+                        name={item.name}
+                        house={item.house}
+                      />
+                    </Link>
                   </li>
                 )
               })}
@@ -23,7 +28,7 @@ class CharacterList extends Component {
     }
   }
   CharacterList.propTypes = {
-  filterResul: PropTypes.array.isRequired
+  filterResult: PropTypes.array.isRequired
 };
 
 export default CharacterList;
