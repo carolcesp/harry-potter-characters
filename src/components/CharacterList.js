@@ -29,6 +29,7 @@ class CharacterList extends Component {
   }
   CharacterList.propTypes = {
   filterResult: PropTypes.array.isRequired
-};
+  };
+
 
 export default CharacterList;
