@@ -1,6 +1,7 @@
 import React, {Component} from "react";
+import PropTypes from "prop-types";
 
-class CaracterList extends Component {
+class CharacterList extends Component {
   render() {
       return (
         <div className="content_list">
@@ -11,9 +12,7 @@ class CaracterList extends Component {
                     <div className="characters_list-card-item">
                       <img src={item.image} alt={item.name} className="character_image"/>
                       <h2 className="character_name">{item.name}</h2>
-                      <div className="character_house-content">
                         <p className="character_house">{item.house}</p>
-                      </div>
                     </div>
                   </li>
                 )
@@ -23,5 +22,8 @@ class CaracterList extends Component {
       );
     }
   }
+  CharacterList.propTypes = {
+  filterResul: PropTypes.array.isRequired
+};
 
-export default CaracterList;
+export default CharacterList;

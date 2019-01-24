@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {getCharacters} from './services/CharactersService';
 import Filters from './components/Filters';
-import CaracterList from './components/CaracterList';
+import CharacterList from './components/CharacterList';
 import './App.css';
 
 class App extends Component {
@@ -51,7 +51,7 @@ class App extends Component {
           </header>
           <main>
             <Filters action={this.getField}/>
-            <CaracterList filterResult={filterResult}/>
+            <CharacterList filterResult={filterResult}/>
           </main>
         </div>
       );
