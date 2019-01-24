@@ -1,3 +1,31 @@
 .App {
   text-align: center;
 }
+.title{
+  text-align: center;
+}
+.content_list{
+ text-align: center;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.characters_list{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4,200px);
+  grid-template-rows: repeat(5,1fr);
+  grid-gap: 20px
+}
+.characters_list-card {
+  border:2px solid black;
+  height: 380px;
+  
+}
+/* .characters_card */
+.character_image{
+  width: 200px;
+  height: 250px;
+}
+/* .character_name */
+/* .character_house   */
