@@ -1,0 +1,16 @@
+
+.characters_list-card-item{
+  text-align: center;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 100px 10px;
+}
+
+.character_image{
+  width: 200px;
+  height: 270px;
+}
+.character_name{
+  font-family: 'Comic Sans MS', arial;
+  margin-top:30px;
+}
