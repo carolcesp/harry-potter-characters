@@ -1,0 +1,17 @@
+{
+  "main.css": "./static/css/main.35537889.chunk.css",
+  "main.js": "./static/js/main.2f1c5156.chunk.js",
+  "main.js.map": "./static/js/main.2f1c5156.chunk.js.map",
+  "static/js/1.9c764f7b.chunk.js": "./static/js/1.9c764f7b.chunk.js",
+  "static/js/1.9c764f7b.chunk.js.map": "./static/js/1.9c764f7b.chunk.js.map",
+  "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
+  "runtime~main.js.map": "./static/js/runtime~main.4a686d48.js.map",
+  "static/media/gryffindor.png": "./static/media/gryffindor.e497aa07.png",
+  "static/media/hufflepuff.png": "./static/media/hufflepuff.b511b948.png",
+  "static/media/ravenclaw.png": "./static/media/ravenclaw.f386438d.png",
+  "static/media/slytherin.png": "./static/media/slytherin.a8df1801.png",
+  "static/css/main.35537889.chunk.css.map": "./static/css/main.35537889.chunk.css.map",
+  "index.html": "./index.html",
+  "precache-manifest.aaad737604eaa8b1c78017c4ac250627.js": "./precache-manifest.aaad737604eaa8b1c78017c4ac250627.js",
+  "service-worker.js": "./service-worker.js"
+}
