@@ -1,0 +1,45 @@
+.App{
+  text-align:center;
+}
+.content_header{
+  display:flex;
+  justify-content: center;
+}
+.avatar_header{
+  margin:0;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+}
+.title{
+  text-align: center;
+  font-family: 'Comic Sans MS', arial;
+  font-size: 20px;
+  text-shadow: 8px 8px 8px #aaa;
+  @media all and(min-width:768px){
+    font-size: 38px;
+}
+  @media all and(min-width:1020px){
+    font-size: 45px;
+}
+}
+
+.characters_list-card-item{
+  text-align: center;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 100px 10px;
+}
+
+.character_image{
+  width: 200px;
+  height: 270px;
+}
+.character_name{
+  margin-top:30px;
+}
+.style_input{
+  border: 2px solid $orange;
+  border-radius: 5px;
+  height: 20px;
+}

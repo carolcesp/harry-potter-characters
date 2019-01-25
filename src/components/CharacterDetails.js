@@ -1,13 +1,26 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
-
-import Gryffindor from './../images/gryffindor';
-
+import imgGryffindor from '../images/gryffindor.png';
+import imgHufflepuff from '../images/hufflepuff.png';
+import imgRavenclaw from '../images/ravenclaw.png';
+import imgSlytherin from '../images/slytherin.png';
 
 class CharacterDetails extends Component {
 
-
+  imgHouseCharacter(myHouse){
+    if(myHouse==='Gryffindor'){
+      return imgGryffindor
+    }else if(myHouse==='Hufflepuff'){
+      return imgHufflepuff
+    } else if(myHouse==='Ravenclaw'){
+      return imgRavenclaw
+    } else if(myHouse==='Slytherin'){
+      return imgSlytherin
+    }else{
+      return ''
+    }
+  }
 
 render() {
   const {results} = this.props;
@@ -28,10 +41,13 @@ render() {
           <div className="detail_card-image">
             <img src={image} alt={name} className="card-image"/>
           </div>
-          <div className="character_card">
-            <h2 className="character_detail-name">{name}</h2>
+          <div className="character_card" >
+            <div className="style_house">
+              <h2 className="character_detail-name">{name}</h2>
+              <img className="style_img-house" src={this.imgHouseCharacter(house)} alt=""/>
+            </div>
             <ul className="detail_card-list">
-              <li className="character_detail-house">Casa: {house} 
+              <li className="character_detail-house">Casa: {house}
               </li>
               <li className="character_detail-date">Nacimiento: {yearOfBirth}</li>
               <li className="character_detail-patronus">Patronus: {patronus}</li>
