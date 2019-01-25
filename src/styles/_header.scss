@@ -1,0 +1,38 @@
+.App{
+  text-align:center;
+}
+.content_header{
+  display:flex;
+  justify-content: center;
+}
+.avatar_header{
+  margin:0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+    @media all and(min-width:768px){
+      width: 60px;
+      height: 60px; 
+  }
+    @media all and(min-width:1020px){
+      width: 100px;
+      height: 100px;
+  }
+}
+.title_header{
+  text-align: center;
+  font-family: 'Comic Sans MS', arial;
+  font-size: 20px;
+  text-shadow: 8px 8px 8px #aaa;
+    @media all and(min-width:768px){
+      font-size: 38px;
+  }
+    @media all and(min-width:1020px){
+      font-size: 55px;
+  }
+}
+.style_input{
+  border: 2px solid $orange;
+  border-radius: 5px;
+  height: 20px;
+}

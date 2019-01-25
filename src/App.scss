@@ -1,7 +1,5 @@
 @import 'colors';
-@import 'styles/detail';
+@import 'styles/header';
 @import 'styles/list';
-
-.App {
- text-align: center;
-}
+@import 'styles/detail';
+@import 'styles/card';
