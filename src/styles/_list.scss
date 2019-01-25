@@ -2,17 +2,28 @@
   text-align: center;
 }
 .content_list{
- text-align: center;
-   display: flex;
+  text-align: center;
+  display: flex;
   justify-content: center;
   align-items: center;
+  
 }
-.characters_list{
+.characters_list{ 
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4,200px);
-  grid-template-rows: repeat(5,1fr);
-  grid-gap: 20px
+  grid-template-columns: 200px;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+    @media all and(min-width:768px){
+      grid-template-columns: repeat(2,200px);
+      grid-template-rows: 1fr;
+      grid-gap: 20px;
+  }
+    @media all and(min-width:1020px){
+      grid-template-columns: repeat(4,200px);
+      grid-template-rows: 1fr;
+      grid-gap: 20px;
+  }
 }
 .characters_list-card {
   background-color: $orange;
