@@ -8,35 +8,28 @@
 .avatar_header{
   margin:0;
   padding: 0;
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
+    @media all and(min-width:768px){
+      width: 60px;
+      height: 60px; 
+  }
+    @media all and(min-width:1020px){
+      width: 100px;
+      height: 100px;
+  }
 }
-.title{
+.title_header{
   text-align: center;
   font-family: 'Comic Sans MS', arial;
   font-size: 20px;
   text-shadow: 8px 8px 8px #aaa;
-  @media all and(min-width:768px){
-    font-size: 38px;
-}
-  @media all and(min-width:1020px){
-    font-size: 45px;
-}
-}
-
-.characters_list-card-item{
-  text-align: center;
-  display:grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 250px 100px 10px;
-}
-
-.character_image{
-  width: 200px;
-  height: 270px;
-}
-.character_name{
-  margin-top:30px;
+    @media all and(min-width:768px){
+      font-size: 38px;
+  }
+    @media all and(min-width:1020px){
+      font-size: 55px;
+  }
 }
 .style_input{
   border: 2px solid $orange;

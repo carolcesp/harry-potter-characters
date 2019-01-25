@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Filters from './components/Filters';
 import CharacterList from './components/CharacterList';
 import CharacterDetails from './components/CharacterDetails';
-import avatar from './images/fondo-hogwarts.png' 
+import avatar from './images/fondo-hogwarts.png';
 
 import './App.scss';
 
@@ -71,8 +71,7 @@ class App extends Component {
         <div className="App">
           <header className="app_header">
             <div className="content_header">
-              <img className="avatar_header" src={avatar} alt="LogoHarryPotter"/>
-              <h1 className="title">Harry Potter Characters</h1>
+              <h1 className="title_header">Harry Potter <img className="avatar_header" src={avatar} alt="LogoHarryPotter"/> Characters</h1>
             </div>
           </header>
           <main>

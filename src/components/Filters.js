@@ -9,8 +9,8 @@ class Filters extends Component {
           <input className="style_input" type="text" size="30" placeholder="Busca a tu personaje favorito" onKeyUp={action}></input>
         </div>
       );
-    }
-  }
+    };
+  };
 Filters.propTypes = {
   action: PropTypes.func.isRequired
 };

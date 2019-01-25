@@ -21,6 +21,7 @@ class CharacterDetails extends Component {
       return ''
     }
   }
+  
 
 render() {
   const {results} = this.props;
@@ -29,14 +30,14 @@ render() {
   if (results.length > 0 && characterId < results.length)  {
     const details = results[characterId];
     const {image,name,house,yearOfBirth,patronus} = details;
-    const deadOrAlive = (details.alive === true) ? 'VIV@ ' : 'MUERTO ☠️';
+    const deadOrAlive = (details.alive === true) ? <span>Aún con vida <i class="fas fa-heartbeat"></i> </span> : <span>Ya no esta entre nosotros <i class="fas fa-skull-crossbones"></i></span>;
     
-
     return (
       <React.Fragment>
         <div className="link_return">
           <Link to="/" >Volver</Link>
         </div>
+
         <div className="content_detail-card">
           <div className="detail_card-image">
             <img src={image} alt={name} className="card-image"/>
@@ -47,11 +48,10 @@ render() {
               <img className="style_img-house" src={this.imgHouseCharacter(house)} alt=""/>
             </div>
             <ul className="detail_card-list">
-              <li className="character_detail-house">Casa: {house}
-              </li>
-              <li className="character_detail-date">Nacimiento: {yearOfBirth}</li>
-              <li className="character_detail-patronus">Patronus: {patronus}</li>
-              <li className="character_detail-alive">Estado: {deadOrAlive}</li>
+              <li className="character_detail-house"><strong>House: </strong><em>{house}</em></li>
+              <li className="character_detail-date"><strong>Year Of Birth: </strong><em>{yearOfBirth}</em></li>
+              <li className="character_detail-patronus"><strong>Patronu: </strong><em>{patronus}</em></li>
+              <li className="character_detail-alive"><strong>Estado: </strong><em>{deadOrAlive}</em></li>
             </ul>
           </div>
         </div>
@@ -65,10 +65,10 @@ render() {
         </React.Fragment>
       );
     }
-  }
-}
-  CharacterDetails.propTypes = {
-    results: PropTypes.array.isRequired
-    };
+  };
+};
+CharacterDetails.propTypes = {
+  results: PropTypes.array.isRequired
+};
 
 export default CharacterDetails;
