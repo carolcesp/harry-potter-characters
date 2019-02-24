@@ -14,7 +14,7 @@ class App extends Component {
         
     this.state = {
        results: [],
-       field:''
+       field:''   
     }
     this.getCharactersHarry = this.getCharactersHarry.bind(this);
     this.getFieldInput = this.getFieldInput.bind(this);
