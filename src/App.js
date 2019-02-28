@@ -14,10 +14,14 @@ class App extends Component {
 
     this.state = {
        results: [],
-       field:''
+       fieldName:'',
+       fieldAncestry:'',
+       fieldHouse:''
     }
     this.getCharactersHarry = this.getCharactersHarry.bind(this);
-    this.getFieldInput = this.getFieldInput.bind(this);
+    this.getFieldName = this.getFieldName.bind(this);
+    this.getFieldAncestry = this.getFieldAncestry.bind(this);
+    this.getFieldHouse = this.getFieldHouse.bind(this);
   }
   componentDidMount(){
     this.getSavedLocalStorage()
@@ -48,19 +52,38 @@ class App extends Component {
       this.getCharactersHarry();
     };
   };
+  getFieldAncestry(e){
+    const selectAncestry = e.currentTarget.value;
+    this.setState({
+      fieldAncestry:selectAncestry
+    })
+  }
 
-  getFieldInput(e){
+  getFieldName(e){
     const fieldCharacter = e.currentTarget.value;
      this.setState({
-       field: fieldCharacter
+       fieldName: fieldCharacter
+     });
+  };
+  getFieldHouse(e){
+    const fieldCharacter = e.currentTarget.value;
+     this.setState({
+       fieldHouse: fieldCharacter
      });
   };
 
   filterCharacters(){
-    const filterName = this.state.results.filter(item => {
+    const filterName = this.state.results
+      .filter(item => {
       const name = item.name;
-      return (name.toUpperCase().includes(this.state.field.toUpperCase())) ? true : false;
-     });
+      return (name.toUpperCase().includes(this.state.fieldName.toUpperCase())) ? true : false;
+     })
+     .filter(item=>{
+      return (item.ancestry.includes(this.state.fieldAncestry))
+    })
+    .filter(item=>{
+      return (item.house.includes(this.state.fieldHouse))
+    });
     return filterName;
   };
 
@@ -78,7 +101,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={()=>(
                 <React.Fragment>
-                  <Filters action={this.getFieldInput}/>
+                  <Filters name={this.getFieldName} ancestry={this.getFieldAncestry} house={this.getFieldHouse}/>
                   <CharacterList filterResult={filterResult}/>
                 </React.Fragment>
                )}/>
